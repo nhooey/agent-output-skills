@@ -9,4 +9,5 @@ built into packages by agent-skill-flake; [README.md](README.md) lists them.
 - `nix develop`: enter the dev shell, which installs the dev shell's skills
   from the `skills-devshell/` sub-flake into `.agents/skills/`.
 - `nix fmt`: format `*.nix` with nixfmt and `*.md` / `*.yaml` with prettier.
-- `nix flake check`: check that every file is formatted.
+- `nix flake check`: build every skill package and check that every file is
+  formatted.

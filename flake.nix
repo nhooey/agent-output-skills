@@ -98,6 +98,11 @@
 
           apps = base.apps.${system};
 
+          # Build every skill package in `nix flake check`, so a skill that
+          # fails to build (bad frontmatter, colliding install names) fails
+          # CI, not just evaluation.
+          checks = base.packages.${system};
+
           # `nix fmt` runs nixfmt over `.nix` and prettier over `.md` / `.yaml`;
           # the module also surfaces a `checks.${system}.treefmt` so `nix flake
           # check` fails on any unformatted file. prettier's includes are pinned
