@@ -36,8 +36,10 @@ Package outputs:
 
 ## Development
 
-```bash
-nix develop      # enter the dev shell; run `menu` to list commands
-nix fmt          # nixfmt over *.nix, prettier over *.md / *.yaml
-nix flake check  # runs the treefmt check (fails on any unformatted file)
-```
+Run `nix develop` to enter the dev shell, then `menu` to list its commands:
+
+- `check`: build every skill package and check that every file is formatted.
+- `fmt`: format `*.nix` with nixfmt and `*.md` / `*.yaml` with prettier.
+- `update-flake`: update every flake input and rewrite `flake.lock`.
+- `update-skills-devshell`: update the lock that pins the dev shell's skills.
+- `reap-skills`: remove every skill the dev shell installed.

@@ -1,0 +1,2 @@
+- Mode: 2 (PRs always, never push to the default branch)
+- On-branch behavior: Push branch + open PR
