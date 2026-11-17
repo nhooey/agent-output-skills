@@ -6,9 +6,10 @@ built into packages by agent-skill-flake; [README.md](README.md) lists them.
 
 ## Build and test
 
-Run `nix develop` to enter the dev shell. It installs the dev shell's
-skills from the `skills-devshell/` sub-flake into `.agents/skills/`, and
-`menu` lists its commands:
+Run `nix develop` to enter the dev shell. It installs skillspkgs'
+`skill-collections` combination, with no additions, from the
+`skills-devshell/` sub-flake into `.agents/skills/`, and `menu` lists its
+commands:
 
 - `check`: build every skill package and check that every file is
   formatted.
